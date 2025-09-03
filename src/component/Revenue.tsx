@@ -49,7 +49,7 @@ export default function Revenue() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="mb-10">
         <CardHeader className=" relative flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div>
             <CardTitle>Order Time</CardTitle>

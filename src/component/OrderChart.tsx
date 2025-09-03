@@ -8,6 +8,7 @@ import {
   ResponsiveContainer,
   TooltipProps,
 } from "recharts"
+import { CardDescription } from "./ui/card"
 type OrderData = {
   name: string
   value: number
@@ -67,6 +68,7 @@ export function OrderChart() {
           <Tooltip content={<CustomTooltip />} />
         </PieChart>
       </ResponsiveContainer>
+      <CardDescription>
 
       <div className="flex justify-center gap-10 text-sm text-muted-foreground">
         {data.map((entry, index) => (
@@ -79,6 +81,7 @@ export function OrderChart() {
           </div>
         ))}
       </div>
+      </CardDescription>
     </div>
     
 
