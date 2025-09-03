@@ -62,7 +62,7 @@ export default function Rating() {
       "
     >
       <div className="absolute right-10 sm:right-14 ">
-        <OuterRing value={60} size={180} color="#F97316">
+        <OuterRing value={70} size={180} color="#F97316">
           <div className="flex flex-col items-center justify-center bg-[#F97316]/90 w-40 h-40 rounded-full text-white shadow-md">
             <span className="text-xl font-bold">85%</span>
             <span className="text-sm">Food Taste</span>
@@ -70,7 +70,7 @@ export default function Rating() {
         </OuterRing>
       </div>
 
-      <div className="absolute -top-1 left-15 sm:top-20 sm:left-18 z-10">
+      <div className="absolute -top-1 left-15 sm:top-20 lg:left-5 lg:top-18 sm:left-18 z-10">
         <OuterRing value={72} size={120} color="#8B5CF6">
           <div className="flex flex-col items-center justify-center bg-[#8B5CF6]/80 w-24 h-24 rounded-full text-white shadow-md">
             <span className="text-lg font-bold">85%</span>
@@ -79,7 +79,7 @@ export default function Rating() {
         </OuterRing>
       </div>
 
-      <div className="absolute bottom-6 -left-8 sm:bottom-18 sm:left-1 z-10">
+      <div className="absolute bottom-6 -left-8 sm:bottom-18 lg:bottom-20 lg:-left-14 sm:left-1 z-10">
         <OuterRing value={72} size={140} color="#06B6D4">
           <div className="flex flex-col items-center justify-center bg-[#06B6D4]/90 w-28 h-28 rounded-full text-white shadow-md">
             <span className="text-lg font-bold">92%</span>
