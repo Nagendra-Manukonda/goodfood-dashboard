@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Separator } from "@/component/ui/separator";
 import { Input } from "@/component/ui/input";
 import { ChevronDownIcon, Search, Menu as MenuIcon } from "lucide-react";
 import { IconBell } from "@tabler/icons-react";

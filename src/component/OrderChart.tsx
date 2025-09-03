@@ -7,7 +7,6 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts"
-import { Separator } from "./ui/separator"
 
 const data = [
   { name: "Afternoon", value: 40, time: "1pm - 4pm", orders: 1890 },

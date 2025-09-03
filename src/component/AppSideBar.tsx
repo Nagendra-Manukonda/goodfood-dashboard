@@ -11,7 +11,7 @@ import {
   IconSettings,
   IconUsers,
   IconX,
-  IconMenu2, // hamburger menu
+  IconMenu2,
 } from "@tabler/icons-react";
 
 import {
