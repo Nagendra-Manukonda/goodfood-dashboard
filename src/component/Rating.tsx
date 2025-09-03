@@ -55,37 +55,32 @@ export default function Rating() {
   return (
     <div
       className="
-        relative flex justify-center items-center 
-        w-full h-[280px] sm:h-[350px] md:h-[420px]
-        scale-75 sm:scale-90 md:scale-100
-        transition-transform
+        relative flex justify-center items-center w-full h-[280px] sm:h-[350px] md:h-[420px] scale-75 sm:scale-90 md:scale-100 transition-transform
       "
     >
-      <div className="absolute right-10 sm:right-14 ">
-        <OuterRing value={70} size={180} color="#F97316">
-          <div className="flex flex-col items-center justify-center bg-[#F97316]/90 w-40 h-40 rounded-full text-white shadow-md">
+      <div className="absolute right-8 ">
+        <OuterRing value={70} size={160} color="#F97316">
+          <div className="flex flex-col items-center justify-center bg-[#F97316]/90 w-35 h-35 rounded-full text-white shadow-md">
             <span className="text-xl font-bold">85%</span>
             <span className="text-sm">Food Taste</span>
           </div>
         </OuterRing>
-      </div>
-
-      <div className="absolute -top-1 left-15 sm:top-20 lg:left-5 lg:top-18 sm:left-18 z-10">
-        <OuterRing value={72} size={120} color="#8B5CF6">
-          <div className="flex flex-col items-center justify-center bg-[#8B5CF6]/80 w-24 h-24 rounded-full text-white shadow-md">
+        <div className=" absolute bottom-20 -left-8 ">
+         <OuterRing value={72} size={110} color="#8B5CF6">
+          <div className="flex flex-col items-center justify-center bg-[#8B5CF6]/80 w-22 h-22 rounded-full text-white shadow-md">
             <span className="text-lg font-bold">85%</span>
             <span className="text-xs">Hygiene</span>
           </div>
         </OuterRing>
-      </div>
-
-      <div className="absolute bottom-6 -left-8 sm:bottom-18 lg:bottom-20 lg:-left-14 sm:left-1 z-10">
-        <OuterRing value={72} size={140} color="#06B6D4">
-          <div className="flex flex-col items-center justify-center bg-[#06B6D4]/90 w-28 h-28 rounded-full text-white shadow-md">
+        </div>
+      <div className=" absolute -bottom-8 -left-25 ">
+        <OuterRing value={72} size={120} color="#06B6D4">
+          <div className="flex flex-col items-center justify-center bg-[#06B6D4]/90 w-26 h-26 rounded-full text-white shadow-md">
             <span className="text-lg font-bold">92%</span>
             <span className="text-xs">Packaging</span>
           </div>
         </OuterRing>
+        </div>
       </div>
     </div>
   );
