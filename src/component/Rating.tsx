@@ -55,8 +55,7 @@ export default function Rating() {
   return (
     <div
       className="
-        relative flex justify-center items-center w-full h-[280px] sm:h-[350px] md:h-[420px] scale-75 sm:scale-90 md:scale-100 transition-transform
-      "
+        relative flex justify-center items-center w-full h-[280px] sm:h-[350px] md:h-[420px] scale-75 sm:scale-90 md:scale-100 transition-transform"
     >
       <div className="absolute right-8 ">
         <OuterRing value={70} size={160} color="#F97316">
