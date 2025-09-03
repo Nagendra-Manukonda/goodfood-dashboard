@@ -468,7 +468,11 @@ function SidebarMenuItem({ className, ...props }: React.ComponentProps<"li">) {
     <li
       data-slot="sidebar-menu-item"
       data-sidebar="menu-item"
-      className={cn("group/menu-item relative w-[200px] h-[42px] my-1.5 pl-5 flex items-center text-[#6087bb] hover:bg-[#707FDD]/20  hover:text-[#5A6ACF]", className)}
+      className={cn(
+        "group/menu-item relative w-full h-[42px] my-1.5 pl-5 flex items-center text-[#6087bb] cursor-pointer rounded-md transition-colors",
+        "hover:bg-[#707FDD]/20 hover:text-[#5A6ACF] active:bg-[#707FDD]/30",
+        className
+      )}
       {...props}
     />
   )
