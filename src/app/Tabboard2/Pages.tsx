@@ -17,7 +17,7 @@ export default function Pages() {
         } as React.CSSProperties
       }
     >
-      <Appsidebar variant="inset" />
+      <Appsidebar collapsible="icon" />
       <SidebarInset>
         <SiteHeader />
         <Separator className="space-x-1" />

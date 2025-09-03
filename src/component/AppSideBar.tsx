@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   IconDashboard,
   IconDatabase,
@@ -19,12 +19,12 @@ import {
   SidebarContent,
   SidebarHeader,
   SidebarMenu,
+  useSidebar,
 } from "@/component/ui/sidebar";
 
 import { NavMain } from "@/component/NavMain";
 import { NavSecondary } from "@/component/NavSecondary";
 import { Separator } from "@/component/ui/separator";
-import { useMobile } from "./hooks/UseMobile";
 
 const data = {
   Menu: [
@@ -42,30 +42,22 @@ const data = {
 };
 
 export default function Appsidebar(
-  props: React.ComponentProps<typeof Sidebar> & {
-    collapsible?: "offcanvas" | "inset" | "none";
-  }
+  props: React.ComponentProps<typeof Sidebar>
 ) {
-  const isMobile = useMobile();
-  const [open, setOpen] = useState(false);
+  const { isMobile, openMobile, setOpenMobile } = useSidebar();
 
   return (
     <>
-      {isMobile && !open && (
+      {isMobile && !openMobile && (
         <button
-          onClick={() => setOpen(true)}
-          className="fixed top-4 left-4 z-50 bg-violet-400 text-white p-2  shadow-md"
+          onClick={() => setOpenMobile(true)}
+          className="fixed top-4 left-4 z-50 bg-violet-500 hover:bg-violet-600 text-white p-2 rounded-lg shadow-md"
         >
           <IconMenu2 size={20} />
         </button>
       )}
 
-      <Sidebar
-        collapsible={isMobile ? "offcanvas" : "inset"}
-        open={open}
-        onOpenChange={setOpen}
-        {...props}
-      >
+      <Sidebar collapsible={isMobile ? "offcanvas" : "icon"} {...props}>
         <SidebarHeader>
           <div className="flex items-center justify-between px-4 py-2 w-full">
             <div className="flex items-center gap-2">
@@ -77,10 +69,10 @@ export default function Appsidebar(
               </h3>
             </div>
 
-            {isMobile && (
+            {isMobile && openMobile && (
               <button
-                onClick={() => setOpen(false)}
-                className="p-1 bg-violet-400 text-white hover:bg-violet-700"
+                onClick={() => setOpenMobile(false)}
+                className="p-2 rounded-lg bg-violet-500 hover:bg-violet-600 text-white"
               >
                 <IconX size={20} />
               </button>
@@ -92,8 +84,8 @@ export default function Appsidebar(
 
         <SidebarMenu />
 
-        <SidebarContent >
-          <NavMain items={data.Menu}  />
+        <SidebarContent>
+          <NavMain items={data.Menu} />
           <NavSecondary items={data.others} />
         </SidebarContent>
       </Sidebar>
