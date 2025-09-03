@@ -11,7 +11,7 @@ import {
   IconSettings,
   IconUsers,
   IconX,
-  IconMenu2,
+  // IconMenu2,
 } from "@tabler/icons-react";
 
 import {
@@ -51,9 +51,9 @@ export default function Appsidebar(
       {isMobile && !openMobile && (
         <button
           onClick={() => setOpenMobile(true)}
-          className="fixed top-4 left-4 z-50 bg-violet-500 hover:bg-violet-600 text-white p-2 rounded-lg shadow-md"
+          // className="fixed top-4 left-4 z-50 bg-violet-500 hover:bg-violet-600 text-white p-2 rounded-lg shadow-md"
         >
-          <IconMenu2 size={20} />
+          {/* <IconMenu2 size={20} /> */}
         </button>
       )}
 
@@ -72,7 +72,7 @@ export default function Appsidebar(
             {isMobile && openMobile && (
               <button
                 onClick={() => setOpenMobile(false)}
-                className="p-2 rounded-lg bg-violet-500 hover:bg-violet-600 text-white"
+                className="p-1 font-semibold rounded-xs bg-violet-500 hover:bg-violet-600 text-white"
               >
                 <IconX size={20} />
               </button>

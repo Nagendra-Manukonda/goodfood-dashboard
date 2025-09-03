@@ -231,9 +231,9 @@ function Sidebar({
       <div
         data-slot="sidebar-container"
         className={cn(
-          " inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex",
+          " inset-y-0 z-10 flex justify-center transition-[left,right,width] duration-200 ease-linear md:flex",
           side === "left"
-            ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
+            ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*)]"
             : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
@@ -376,7 +376,7 @@ function SidebarContent({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="sidebar-content"
       data-sidebar="content"
       className={cn(
-        "flex min-h-0 flex-col flex-1 items-center align-middle right-20 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+        "flex min-h-0 flex-col flex-1 mx-5 my-5  items-center align-middle scroll-auto overflow-auto group-data-[collapsible=icon]:overflow-hidden",
         className
       )}
       {...props}
@@ -388,7 +388,7 @@ function SidebarGroup({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="sidebar-group"
       data-sidebar="group"
-      className={cn("relative flex  font-Poppins font-normal w-full min-w-0 flex-col p-2", className)}
+      className={cn("relative flex   font-Poppins font-normal w-full min-w-0 flex-col p-2", className)}
       {...props}
     />
   )
@@ -446,7 +446,7 @@ function SidebarGroupContent({
     <div
       data-slot="sidebar-group-content"
       data-sidebar="group-content"
-      className={cn("w-full font-Poppins font-normal text-violet-500", className)}
+      className={cn("font-Poppins font-normal text-violet-500", className)}
       {...props}
     />
   )

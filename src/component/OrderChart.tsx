@@ -68,7 +68,7 @@ export function OrderChart() {
         </PieChart>
       </ResponsiveContainer>
 
-      <div className="flex justify-center gap-10 mt-2 text-sm text-muted-foreground">
+      <div className="flex justify-center gap-10 text-sm text-muted-foreground">
         {data.map((entry, index) => (
           <div key={index} className="flex items-center gap-2">
             <span

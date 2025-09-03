@@ -23,7 +23,7 @@ export default function Revenue() {
         <CardHeader className=" relative flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div>
             <CardTitle>Revenue</CardTitle>
-            <CardDescription className="font-semibold mt-1.5">
+            <CardDescription className="font-semibold text-xl mt-1.5">
               IDR 7.852.000
             </CardDescription>
           </div>
@@ -100,21 +100,21 @@ export default function Revenue() {
               2.568
             </CardDescription>
           </div>
-          <CardAction className="absolute top-4 right-4 sm:static sm:ml-auto">
+          <CardAction className="absolute right-4 sm:static sm:ml-auto">
             <Button className="bg-white text-violet-500 hover:bg-white">
               View Report
             </Button>
           </CardAction>
         </CardHeader>
         <CardContent>
-          <CardDescription className="text-red-600 flex items-center font-semibold mt-1">
+          <CardDescription className="text-red-600 flex items-center font-semibold">
             <IconArrowDown className="w-4 h-4 mr-1" />
             2.1%{" "}
-            <span className="text-violet-400 font-normal ml-1">
+            <span className="text-violet-400 font-normal ml-2">
               vs last week
             </span>
           </CardDescription>
-          <CardDescription className="text-violet-500 mt-2">
+          <CardDescription className="text-violet-500 my-2">
             Sales from 1-6 Dec, 2020
           </CardDescription>
           <Graph />

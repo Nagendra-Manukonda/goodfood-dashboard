@@ -12,7 +12,7 @@ export default function Pages() {
       className="rounded-lg"
       style={
         {
-          "--sidebar-width": "calc(var(--spacing) * 72)",
+          "--sidebar-width": "calc(var(--spacing) * 62)",
           "--header-height": "calc(var(--spacing) * 16)",
         } as React.CSSProperties
       }
